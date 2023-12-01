@@ -1,5 +1,4 @@
 <script setup>
-  import NotesList from './components'
 </script>
 
 <template>
