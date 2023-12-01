@@ -1,10 +1,11 @@
 <script setup>
+import NoteList from './components/NoteList.vue'
 </script>
 
 <template>
   <div>
-    <h1>Vue Notes</h1>
-    <NotesList />
+    <h1>GateJarr's Awesome Vue Notes App</h1>
+    <NoteList />
     <!-- your code here -->
   </div>
 </template>
