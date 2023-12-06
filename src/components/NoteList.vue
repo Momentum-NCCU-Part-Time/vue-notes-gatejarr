@@ -1,17 +1,22 @@
+<!-- Note Display -->
+
 <template>
   <ul>
     <li v-for="note in notes"
       :key="note.id">
       {{ note.title }},
       {{ note.body }},
-      {{ note.updatedAt }}
+      {{ note.updatedAt }},
+      {{ note.createdAt }}
     </li>
   </ul>
 </template>
 
+
 <script setup>
 import { ref } from 'vue'
 import { getNotes } from '@/requests'
+// import NewForm from './NewForm.vue'
 
 const notes = ref([])
 getNotes().then((data) =>{
