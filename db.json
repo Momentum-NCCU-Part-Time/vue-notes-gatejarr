@@ -7,15 +7,22 @@
       "updatedAt": "2018-01-01T00:00:00.000Z"
     },
     {
-      "id": 2,
-      "title": "Sample Note 2",
-      "body": "This is the body of my second note. it is now working."
+      "title": "Testing",
+      "body": "1 2 3",
+      "createdAt": "2023-12-06T21:30:53.274Z",
+      "id": 2
     },
     {
-      "title": "asdf",
-      "body": "asdf",
-      "createdAt": "2023-12-05T23:42:37.742Z",
+      "title": "Testing 2",
+      "body": "4 5 6",
+      "createdAt": "2023-12-06T21:37:36.664Z",
       "id": 3
+    },
+    {
+      "title": "Testing 3",
+      "body": "7 8 9",
+      "createdAt": "2023-12-06T21:39:17.008Z",
+      "id": 4
     }
   ]
 }
