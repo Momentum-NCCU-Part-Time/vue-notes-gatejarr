@@ -18,6 +18,7 @@
 import { ref } from 'vue'
 import { getNotes } from '@/requests'
 import NewForm from './NewForm.vue'
+import NoteEditDelete from './NoteEditDelete.vue'
 
 const notes = ref([])
 getNotes().then((data) =>{

@@ -9,20 +9,8 @@
     {
       "title": "Testing",
       "body": "1 2 3",
-      "createdAt": "2023-12-06T21:30:53.274Z",
+      "createdAt": "2023-12-06T21:46:45.948Z",
       "id": 2
-    },
-    {
-      "title": "Testing 2",
-      "body": "4 5 6",
-      "createdAt": "2023-12-06T21:37:36.664Z",
-      "id": 3
-    },
-    {
-      "title": "Testing 3",
-      "body": "7 8 9",
-      "createdAt": "2023-12-06T21:39:17.008Z",
-      "id": 4
     }
   ]
 }
