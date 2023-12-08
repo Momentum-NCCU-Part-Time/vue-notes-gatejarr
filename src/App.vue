@@ -9,13 +9,9 @@ import NoteList from './components/NoteList.vue'
     <div id="noteList">
       <NoteList />
     </div>
-<<<<<<< HEAD
     <div id="newForm">
-=======
-    <!-- <div class="newForm">
->>>>>>> 9cc4fd73da307fedce48e1ac955c2d34f920319c
       <NewForm />
-    </div> -->
+    </div>
     <!-- your code here -->
   </div>
 </template>
