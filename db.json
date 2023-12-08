@@ -5,6 +5,15 @@
       "title": "Sample note",
       "body": "This is the body of my note",
       "updatedAt": "2018-01-01T00:00:00.000Z"
+<<<<<<< HEAD
+=======
+    },
+    {
+      "title": "Testing",
+      "body": "1 2 3",
+      "createdAt": "2023-12-06T21:46:45.948Z",
+      "id": 2
+>>>>>>> 9cc4fd73da307fedce48e1ac955c2d34f920319c
     }
   ]
 }
