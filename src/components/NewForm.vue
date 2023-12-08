@@ -3,14 +3,14 @@
 <template>
   <form @submit.prevent="addNote" class="addNote">
     <div>
-      <div class="newNoteTitle">
+      <div id="newNoteTitle">
         <label for="note-title">New Note Title</label>
         <input
         type="text"
         v-model="newNoteTitle"
         />
       </div>
-      <div>
+      <div id="newNoteBody">
         <label for="note-body">New Note Body</label>
         <textarea
         v-model="newNoteBody">
@@ -20,7 +20,7 @@
         <button
         type="submit"
         :disabled="!newNoteTitle">
-        Add note
+        Add Note
         </button>
       </div>
     </div>

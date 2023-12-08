@@ -6,10 +6,10 @@ import NewForm from './components/NewForm.vue'
 <template>
   <div>
     <h1>GateJarr's Awesome Vue Notes App</h1>
-    <div>
+    <div id="noteList">
       <NoteList />
     </div>
-    <div class="newForm">
+    <div id="newForm">
       <NewForm />
     </div>
     <!-- your code here -->
