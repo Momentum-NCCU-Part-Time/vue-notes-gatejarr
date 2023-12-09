@@ -12,22 +12,22 @@ getNotes().then((data) => {
   notes.value = data;
 });
 
-const addUpdatedNote = (updatedNote) => {
-  notes.value = notes.value.map((note) => {
-    if (note.id === updatedNote.id) {
-      return updatedNote;
-    }
-    return note;
-  });
-};
+// const addUpdatedNote = (updatedNote) => {
+//   notes.value = notes.value.map((note) => {
+//     if (note.id === updatedNote.id) {
+//       return updatedNote;
+//     }
+//     return note;
+//   });
+// };
 
 const addNoteToList = (note) => {
   notes.value = [...notes.value, note];
 };
 
-const removeDeletedNote = (noteId) => {
-  notes.value = notes.value.filter((note) => note.id !== noteId);
-};
+// const removeDeletedNote = (noteId) => {
+//   notes.value = notes.value.filter((note) => note.id !== noteId);
+// };
 </script>
 
 <template>
@@ -35,7 +35,9 @@ const removeDeletedNote = (noteId) => {
   <div v-for="note in notes" :key="note.id">
     <h2>{{ note.title }}</h2>
     <h4>{{ note.body }}</h4>
-    <NoteEdit />
-    <NoteDelete />
+    <div>
+      <NoteEdit />
+      <NoteDelete />
+    </div>
   </div>
 </template>

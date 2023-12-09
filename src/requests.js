@@ -17,7 +17,7 @@ export const createNote = (note) => {
 
 export const editNote = (note) => {
   const { id, title, body } = note;
-  return fetch("${apiURL}/${id}", {
+  return fetch(`${apiURL}/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -26,8 +26,8 @@ export const editNote = (note) => {
   }).then((response) => response.json());
 };
 
-export const deleteNote = (note) => {
-  return fetch("${apiURL}/${id}", {
+export const deleteNote = (id) => {
+  return fetch(`${apiURL}/${id}`, {
     method: "DELETE",
   }).then((response) => response.json());
 };

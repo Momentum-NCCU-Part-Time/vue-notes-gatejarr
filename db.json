@@ -7,8 +7,8 @@
       "updatedAt": "2018-01-01T00:00:00.000Z"
     },
     {
-      "title": "Sample Note 2",
-      "body": "Testing 1 2 3",
+      "title": "Sample note 2",
+      "body": "This is the body of my second note. It is the one I will delete if I ever get delete to work. :/",
       "id": 2
     }
   ]
