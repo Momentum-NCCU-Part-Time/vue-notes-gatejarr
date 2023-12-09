@@ -11,7 +11,7 @@ export const createNote = (note) => {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ title, body, createdAt: new Date() }),
+    body: JSON.stringify({ title, body }),
   }).then((response) => response.json());
 };
 

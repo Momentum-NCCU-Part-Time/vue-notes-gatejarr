@@ -1,8 +1,29 @@
 <!-- New Note Form -->
 
+<script setup>
+  import { ref } from 'vue'
+  import { createNote } from '@/requests'
+  const newNoteTitle = ref ('')
+  const newNoteBody = ref ('')
+  const emit = defineEmits(['noteCreated'])
+
+  const addNote = () => {
+    if (!newNoteTitle.value) return
+    createNote({ title: newNoteTitle.value, body: newNoteBody.value}).then((createdNote) => {
+      emit('noteCreated', createdNote)
+      resetForm()
+    })
+  }
+
+  const resetForm = () => {
+    newNoteTitle.value = ''
+    newNoteBody.value = ''
+  }
+</script>
+
 <template>
   <form @submit.prevent="addNote" class="addNote">
-    <div>
+    <div id="newNote">
       <div id="newNoteTitle">
         <label for="note-title">New Note Title</label>
         <input
@@ -26,24 +47,3 @@
     </div>
   </form>
 </template>
-
-<script setup>
-  import { ref } from 'vue'
-  import { createNote } from '@/requests'
-  const newNoteTitle = ref ('')
-  const newNoteBody = ref ('')
-  const emit = defineEmits(['noteCreated'])
-
-  const addNote = () => {
-    if (!newNoteTitle.value) return
-    createNote({ title: newNoteTitle.value, body: newNoteBody.value}).then((createdNote) => {
-      emit('noteCreated', createdNote)
-      resetForm()
-    })
-  }
-
-  const resetForm = () => {
-    newNoteTitle.value = ''
-    newNoteBody.value = ''
-  }
-</script>
