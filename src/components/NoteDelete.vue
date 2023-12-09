@@ -4,11 +4,15 @@
 import { ref } from "vue";
 import { deleteNote } from "@/requests";
 
-// const removeNote = (noteId) => {
-//   deleteNote(noteId);
-// };
+const emit = defineEmits(["noteDeleted"]);
+
+const removeNote = (noteId) => {
+  deleteNote(noteId).then(() => {
+    emit("noteDeleted", noteId);
+  });
+};
 </script>
 
 <template>
-  <button @click="deleteNote(note.id)">Delete</button>
+  <button @click="removeNote(note.id)">Delete Doesn't</button>
 </template>

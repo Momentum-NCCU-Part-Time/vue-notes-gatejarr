@@ -1,15 +1,9 @@
 {
   "notes": [
     {
-      "id": 1,
-      "title": "Sample note",
-      "body": "This is the body of my note",
-      "updatedAt": "2018-01-01T00:00:00.000Z"
-    },
-    {
-      "title": "Sample note 2",
-      "body": "This is the body of my second note. It is the one I will delete if I ever get delete to work. :/",
-      "id": 2
+      "title": "Sample Note 1",
+      "body": "Body of Sample Note 1",
+      "id": 1
     }
   ]
 }
