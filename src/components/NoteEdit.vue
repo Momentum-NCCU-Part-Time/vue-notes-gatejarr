@@ -3,8 +3,10 @@
 <script setup>
 import { ref } from "vue";
 import { editNote } from "@/requests";
+
+// const editNoteForm ();
 </script>
 
 <template>
-  <button @click="editNote">Edit</button>
+  <button @click.prevent="editNoteForm">Edit</button>
 </template>

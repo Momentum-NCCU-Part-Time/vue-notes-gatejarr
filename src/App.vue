@@ -1,6 +1,5 @@
 <script setup>
-import NoteList from './components/NoteList.vue'
-//import NewForm from './components/NewForm.vue'
+import NoteList from "./components/NoteList.vue";
 </script>
 
 <template>
@@ -11,11 +10,7 @@ import NoteList from './components/NoteList.vue'
     <div id="noteList">
       <NoteList />
     </div>
-    <!-- <div id="newForm">
-      <NewForm />
-    </div> -->
   </div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
