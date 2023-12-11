@@ -2,8 +2,13 @@
   "notes": [
     {
       "title": "Sample Note 1",
-      "body": "Body of Sample Note 1",
+      "body": "Sample Note 1 Body",
       "id": 1
+    },
+    {
+      "title": "Sample Note 2",
+      "body": "Sample Note 2 Body",
+      "id": 2
     }
   ]
 }

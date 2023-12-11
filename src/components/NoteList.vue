@@ -5,9 +5,6 @@ import { ref } from "vue";
 import { getNotes, deleteNote } from "@/requests";
 import NewForm from "./NewForm.vue";
 import NoteEdit from "./NoteEdit.vue";
-import NoteDelete from "./NoteDelete.vue";
-
-const emit = defineEmits(["noteDeleted"]);
 
 const notes = ref([]);
 getNotes().then((data) => {
@@ -15,20 +12,8 @@ getNotes().then((data) => {
 });
 
 const removeNote = (noteId) => {
-  deleteNote(noteId).then(() => {
-    emit("noteDeleted", noteId);
-    removeDeletedNote();
-  });
+  deleteNote(noteId).then(removeDeletedNote(noteId));
 };
-
-// const addUpdatedNote = (updatedNote) => {
-//   notes.value = notes.value.map((note) => {
-//     if (note.id === updatedNote.id) {
-//       return updatedNote;
-//     }
-//     return note;
-//   });
-// };
 
 const addNoteToList = (note) => {
   notes.value = [...notes.value, note];
@@ -46,6 +31,5 @@ const removeDeletedNote = (noteId) => {
     <h4>{{ note.body }}</h4>
     <button @click="removeNote(note.id)">Delete Works</button>
     <NoteEdit />
-    <NoteDelete />
   </div>
 </template>
