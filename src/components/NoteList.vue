@@ -1,4 +1,5 @@
 <!-- Note Display -->
+<!-- DISABLING FOR A DIFFERENT APPROACH -->
 
 <script setup>
 import { ref } from "vue";
@@ -30,10 +31,12 @@ const removeDeletedNote = (noteId) => {
 
 <template>
   <NewForm @note-created="addNoteToList" />
-  <div v-for="note in notes" :key="note.id">
-    <h2>{{ note.title }}</h2>
-    <h4>{{ note.body }}</h4>
-    <button @click.prevent="removeNote(note.id)">Delete</button>
-    <NoteEdit />
+  <div id="noteCard">
+    <div v-for="note in notes" :key="note.id" :note="note">
+      <h2>{{ note.title }}</h2>
+      <h4>{{ note.body }}</h4>
+      <button @click.prevent="removeNote(note.id)">Delete</button>
+      <NoteEdit />
+    </div>
   </div>
 </template>

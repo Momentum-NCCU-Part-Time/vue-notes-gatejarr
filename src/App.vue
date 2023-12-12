@@ -1,5 +1,6 @@
 <script setup>
 import NoteList from "./components/NoteList.vue";
+import NoteBook from "./components/NoteBook.vue";
 </script>
 
 <template>
@@ -8,7 +9,7 @@ import NoteList from "./components/NoteList.vue";
       <h1>GateJarr's Awesome Vue Notes App</h1>
     </div>
     <div id="noteList">
-      <NoteList />
+      <NoteBook />
     </div>
   </div>
 </template>

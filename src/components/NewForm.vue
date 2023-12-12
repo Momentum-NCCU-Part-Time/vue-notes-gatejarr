@@ -28,11 +28,11 @@ const resetForm = () => {
     <div id="newNote">
       <div id="newTitle">
         <label id="newNoteTitle" for="note-title">New Note Title</label>
-        <input type="text" v-model="newNoteTitle" />
+        <input type="text" v-model="newNoteTitle" placeholder="Title" />
       </div>
       <div id="newNoteBody">
         <label id="newBody" for="note-body">New Note Body</label>
-        <textarea v-model="newNoteBody"> </textarea>
+        <textarea v-model="newNoteBody" placeholder="Body"> </textarea>
       </div>
       <div>
         <button type="submit" :disabled="!newNoteTitle">Add Note</button>
