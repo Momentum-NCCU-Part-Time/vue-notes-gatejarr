@@ -18,6 +18,15 @@ const addNoteToList = (note) => {
 const removeDeletedNote = (noteId) => {
   notes.value = notes.value.filter((note) => note.id !== noteId);
 };
+
+// const editedNoteToList = (editedNote) => {
+//   notes.vaule = notes.value.map((note) {
+//     if (note.id === editedNote.id) {
+//       return editedNote
+//     }
+//     return note
+//   })
+// }
 </script>
 
 <template>
@@ -27,6 +36,6 @@ const removeDeletedNote = (noteId) => {
     :key="note.id"
     :note="note"
     @noteDeleted="($event) => removeDeletedNote($event)"
-    @noteEdited="($event) => updateNoteToList($event)"
+    @noteEdited="($event) => editedNoteToList($event)"
   />
 </template>

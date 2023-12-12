@@ -5,3 +5,8 @@ h1 {
 div {
   border: 1px solid gray;
 }
+
+#noteBook {
+  width: 500px;
+  height: auto;
+}

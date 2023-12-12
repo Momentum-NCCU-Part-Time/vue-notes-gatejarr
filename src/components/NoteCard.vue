@@ -8,24 +8,26 @@ const props = defineProps({
 const emit = defineEmits(["noteEdited", "noteDeleted"]);
 
 const editing = ref(false);
+const editedTitle = ref(props.note.title);
+const editedBody = ref(props.note.body);
 
-// Delete Notes Start
 const removeNote = (noteId) => {
   deleteNote(noteId).then(() => {
     emit("noteDeleted", noteId);
   });
 };
-// Delete Notes End
+
 const saveEdit = (noteId) => {
-  if (!editedTitle.value) return;
-  editNote({
-    id: noteId,
-    title: editedTitle.value,
-    body: editedBody.value,
-  }).then((editedNote) => {
-    emit("noteEdited", editedNote);
-    editing.value = false;
-  });
+  if (!editedTitle.value)
+    return editNote({
+      id: noteId,
+      title: editedTitle.value,
+      body: editedBody.value,
+    }).then((editedNote) => {
+      emit("noteEdited", editedNote);
+      editing.value = false;
+    });
+  console.log("Save Button Clicked");
 };
 </script>
 

@@ -4,11 +4,11 @@ import NoteBook from "./components/NoteBook.vue";
 </script>
 
 <template>
-  <div>
+  <div id="noteBook">
     <div id="header">
       <h1>GateJarr's Awesome Vue Notes App</h1>
     </div>
-    <div id="noteList">
+    <div>
       <NoteBook />
     </div>
   </div>
